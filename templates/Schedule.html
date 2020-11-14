@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <title>МТУСИ</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Emoji_u263a.svg/480px-Emoji_u263a.svg.png">
+</head>
+<body>
+{% include "Nav.html" %}
+<div class="container">
+    <div class="content">
+        <h2>Расписание</h2>
+        <button role="button" class="btn btn-warning"><a class="nav-link" href="/addToSchedule">Добавить запись</a></button>
+        <table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Группа</th>
+        <th scope="col">День недели</th>
+        <th scope="col">Четная/нечетная неделя</th>
+        <th scope="col">Время</th>
+        <th scope="col">Предмет</th>
+        <th scope="col">Преподаватель</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for lession in schedule %}
+    <tr class="table-light">
+        <td>{{ lession.group_id }}</td>
+        <td>{{ lession.interval_id }}</td>
+        <td>{{ lession.subject_id }}</td>
+        <td>{{ lession.lecturer_id }}</td>
+    {% endfor %}
+    </tr>
+    </tbody>
+</table>
+       </div>
+    </div>
+</body>
+</html>
