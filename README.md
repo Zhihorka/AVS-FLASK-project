@@ -1,5 +1,7 @@
 # AVS-flask-project
 
-memo БФИ1801 Сиротин НС
+📝 БФИ1801 Сиротин НС
 
-Debug mode [heavy_check_mark] package Python3 package flask package flask-sqlalchemy
+Debug mode [✔️]
+
+📦 Python3 📦 flask 📦 flask-sqlalchemy
